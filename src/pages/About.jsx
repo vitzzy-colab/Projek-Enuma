@@ -1,57 +1,86 @@
-import {useState} from "react";
-import cmd from "../assets/cmdcheckversion.png";
-
 export default function About() {
 
-    const [open, setOpen] = useState(false);
+    return (
 
-    return (<>
-        <h1>Hasil Pelatihan</h1>
-        <div className="about">
-            <button 
-                className="btn"
-                onClick={()=> setOpen(!open)}
-            >
-                React JS {open? "▲" : "▼"}
-            </button>
+        <section>
 
-            {open &&(
-                <div className="materi">
-                    <h3>Apa itu React JS?</h3>
-                    <p>React adalah JavaScript library yang digunakan untuk membuat user interface</p>
-                    <br/>
-                    <h3>Keunggulan</h3>
-                    <ol>
-                        <li>Ukurannya kecil dan ringan</li>
-                        <li>Bebas/Fleksibel</li>
-                        <li>Simpel dan ngga ribet</li>
-                    </ol>
-                    <br/>
-                    <h3>3 Pilar Utama React</h3>
-                    <ol>
-                        <li>Komponen</li>
-                        <p>Komponen merupakan salah satu cara untuk membuat code lebih ringkas. Komponen bekerja seperti template yang dapat digunakan berulang-kali hanya dengan memanggil nama function atau class</p>
-                        <li>Deklaratif</li>
-                        <p>Comming soon...</p>
-                        <li>Aliran data Searah</li>
-                        <p>Comming soon...</p>
-                    </ol>
-                    <br/>
-                    <h3>Install Node.js</h3>
-                    <p>Buka link ini untuk download {""}
-                        <a href="https://nodejs.org/en/download"
-                            target="blank"
-                            rel="noopener noreferrer">Node.js</a>. Lalu install file .msi
+            <header className="about-header">
+
+                <h1>
+                    Hasil Pelatihan
+                </h1>
+
+                <p>
+                    Selama pelatihan saya mempelajari berbagai teknologi
+                    yang digunakan dalam pengembangan website modern.
+                </p>
+
+            </header>
+
+            <div className="about-grid">
+
+                <article className="card">
+
+                    <span className="card-tag">
+                        Frontend
+                    </span>
+
+                    <h2>
+                        React JS
+                    </h2>
+
+                    <p>
+                        Saya mempelajari cara membangun website menggunakan
+                        React JS serta memahami konsep Component,
+                        Declarative UI, dan One Way Data Flow.
                     </p>
-                    <p>cek apakah node dan npm sudah terinstall dengan mengetik ini di cmd :
-                        <br/> <img src={cmd} className="imgver"></img>
+
+                    <div className="card-list">
+
+                        <span>Components</span>
+
+                        <span>Declarative UI</span>
+
+                        <span>One Way Data Flow</span>
+
+                    </div>
+
+                </article>
+
+                <article className="card">
+
+                    <span className="card-tag">
+                        Version Control
+                    </span>
+
+                    <h2>
+                        GitHub
+                    </h2>
+
+                    <p>
+                        Saya mempelajari penggunaan GitHub untuk membuat
+                        repository, melakukan commit, push project,
+                        dan mengelola source code.
                     </p>
-                    <br/>
-                    <h3>Membuat project dengan react</h3>
-                    <p></p>
-                </div>
-            )}
-        </div>
-        </>
+
+                    <div className="card-list">
+
+                        <span>Repository</span>
+
+                        <span>Commit</span>
+
+                        <span>Push</span>
+
+                        <span>Version Control</span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
     );
+
 }
