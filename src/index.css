@@ -1194,3 +1194,25 @@ header{
     }
 
 }
+
+.journey-actions{
+    margin-top:20px;
+}
+
+.btn-primary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 20px;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
